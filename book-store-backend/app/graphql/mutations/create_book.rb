@@ -13,7 +13,7 @@ class Mutations::CreateBook < Mutations::Base
              image: image)
 
     if @xx.save
-      @xx
+      { book: @xx }
     else
       Book.new
     end
