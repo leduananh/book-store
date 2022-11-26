@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "build": "esbuild app/javascript/application.js --bundle --sourcemap --outdir=app/assets/builds --loader:.js=jsx",
+    "watch": "esbuild app/javascript/application.js --watch --bundle --outdir=app/assets/builds --loader:.js=jsx"
+  },
+  "name": "book_store_client",
+  "private": "true",
+  "dependencies": {
+    "@apollo/client": "^3.7.1",
+    "@headlessui/react": "^1.7.4",
+    "@heroicons/react": "^2.0.13",
+    "@hotwired/stimulus": "^3.1.1",
+    "@hotwired/turbo-rails": "^7.2.4",
+    "apollo-upload-client": "^17.0.0",
+    "esbuild-windows-64": "^0.15.15",
+    "glob": "^8.0.3",
+    "graphql": "^16.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.39.5",
+    "react-router-dom": "^6.4.3",
+    "remount": "^1.0.0"
+  }
+}
