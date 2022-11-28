@@ -59,6 +59,7 @@ export default function NavbarTailwind() {
                                             <Dropdown name={item.name} dropDowns={item["dropDowns"]}/>
                                         ) : (
                                             <NavLink
+                                                key={item.name}
                                                 to={item.href}
                                                 className={
                                                     ({isActive}) =>

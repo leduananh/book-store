@@ -12,6 +12,16 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      keyframes: {
+        spin: {
+          'from': { transform: 'rotate(0.0deg)' },
+          'to': { transform: 'rotate(360deg)' },
+
+        },
+      },
+      animation: {
+        'animate-spin': 'animation: spin 1s linear infinite',
+      },
     },
   },
   plugins: [

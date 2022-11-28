@@ -3,27 +3,30 @@ import FormInput from "../shared/FormInput";
 import {useState} from "react";
 
 const BookForm = (props) => {
-    const {inputs, submit, initState } = props
+    const {inputs, submit, initState} = props
     const {submitBtn, onSubmit, method} = submit
 
-    const [values, setValues] = useState(initState)
+    // const [values, setValues] = useState(initState)
 
-    const onFormInputChange = ({target : {name: inputName, value: inputVal, files: inputFiles} }) => {
-
-        setValues(prevVal => {
-            return {
-                ...prevVal,
-                [inputName]: inputFiles ? inputFiles[0] : inputVal
-            }
-        })
-    }
+    // const onFormInputChange = ({target: {name: inputName, value: inputVal, files: inputFiles}}) => {
+    //
+    //     setValues(prevVal => {
+    //         return {
+    //             ...prevVal,
+    //             [inputName]: inputFiles ? inputFiles[0] : inputVal
+    //         }
+    //     })
+    // }
     return (
         <>
-            <form className="mt-8 space-y-6" method={method} onSubmit={(event)=>onSubmit(event,values)}>
+            <form className="mt-8 space-y-6" method={method} onSubmit={onSubmit}>
                 <input type="hidden" name="remember" defaultValue="true"/>
                 {
                     inputs.map(input => (
-                        <FormInput key={input.id} {...input} value={values[input.name]} onChange={onFormInputChange}/>
+                        // <FormInput key={input.id} {...input} value={values[input.name]} onChange={onFormInputChange}/>
+                        <FormInput key={input.id} {...input}
+                                   // value={values[input.name]}
+                        />
                     ))
                 }
 

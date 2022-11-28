@@ -4,6 +4,7 @@ import AddBookPage from "../pages/book/AddBook.page";
 import NotFoundPage from "../pages/NotFound.page";
 import TestPage from "../pages/Test.page";
 import ROUTES from "./Routes.path"
+import BookDetailsPage from "../pages/book/BookDetailsPage";
 
 const pagesData = [
     {
@@ -14,6 +15,11 @@ const pagesData = [
     {
         path: ROUTES.PAGE.ADD_BOOK,
         element: < AddBookPage/>,
+        title: "addBook"
+    },
+    {
+        path: ROUTES.PAGE.BOOK_DETAIL,
+        element: < BookDetailsPage/>,
         title: "addBook"
     },
     {
